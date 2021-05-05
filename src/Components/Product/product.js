@@ -1,11 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import {  faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import './product.css';
+import { Link } from 'react-router-dom';
 
 
 const product = (props) => {
-    const {img,name,seller,price,stock} = props.product;
+    const {img,name,seller,price,stock, key} = props.product;
     return (
         <div className="product-area">
             <div>
@@ -14,7 +15,7 @@ const product = (props) => {
             </div>
 
             <div>
-                <h3 className="product-name">{name}</h3>
+                <h3 className="product-name"><Link to={"/product/"+key}>{name}</Link> </h3>
                 <br/>
                 <p><small>by:{seller}</small></p>
                 <p>${price}</p>
