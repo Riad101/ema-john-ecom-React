@@ -12,6 +12,8 @@ import Review from './Components/Review/Review';
 import Inventory from './Components/Inventory/Inventory';
 import NotFound from './Components/NotFound/NotFound';
 import ProductDetails from './Components/ProductDetails/ProductDetails';
+import Login from './Components/Login/Login';
+import Shipment from './Components/Shipment/Shipment';
 
 
 function App() {
@@ -28,6 +30,12 @@ function App() {
           </Route>
           <Route path="/inventory">
             <Inventory></Inventory>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="/shipment">
+            <Shipment></Shipment>
           </Route>
           <Route exact path="/">
             <Shop></Shop>
